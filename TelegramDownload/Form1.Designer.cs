@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDestino = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtToken = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.btnDetener = new System.Windows.Forms.Button();
             this.lblEstatus = new System.Windows.Forms.Label();
             this.lblDescargados = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtDestino
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtDestino.Location = new System.Drawing.Point(12, 29);
+            this.txtDestino.Name = "txtDestino";
+            this.txtDestino.Size = new System.Drawing.Size(296, 20);
+            this.txtDestino.TabIndex = 0;
+            this.txtDestino.Text = "C:\\Telegram";
             // 
             // label1
             // 
@@ -63,12 +64,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Token";
             // 
-            // textBox2
+            // txtToken
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtToken.Location = new System.Drawing.Point(12, 82);
+            this.txtToken.Name = "txtToken";
+            this.txtToken.Size = new System.Drawing.Size(296, 20);
+            this.txtToken.TabIndex = 2;
+            this.txtToken.Text = "618455177:AAGy4lkSVAYzghUVulPr_oNhSZdBL5VCUsY";
             // 
             // btnIniciar
             // 
@@ -78,6 +80,7 @@
             this.btnIniciar.TabIndex = 4;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // btnDetener
             // 
@@ -116,9 +119,9 @@
             this.Controls.Add(this.btnDetener);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtToken);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDestino);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -128,10 +131,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtToken;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Button btnDetener;
         private System.Windows.Forms.Label lblEstatus;
