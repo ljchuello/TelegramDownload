@@ -52,10 +52,24 @@ namespace TelegramDownload
                         File fileDocument = await _telegramBotClient.GetFileAsync(document.FileId);
                         ext = Path.GetExtension(fileDocument.FilePath);
                         downloadUrl = $"https://api.telegram.org/file/bot{txtToken.Text}/{fileDocument.FilePath}";
+                        string documentFileName = $"C:\\bot\\{_usuarioTel.Id}\\{Guid.NewGuid()}{ext}";
                         using (WebClient webClient = new WebClient())
                         {
-                            webClient.DownloadFile(new Uri(downloadUrl), $"C:\\bot\\{_usuarioTel.Id}\\{Guid.NewGuid()}{ext}");
+                            webClient.DownloadFile(new Uri(downloadUrl), documentFileName);
                         }
+
+                        try
+                        {
+                            using (Stream stream = System.IO.File.OpenRead(documentFileName))
+                            {
+                                await _telegramBotClient.SendPhotoAsync(13707657, stream);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex);
+                        }
+
                         break;
 
                     case MessageType.Photo:
@@ -63,10 +77,24 @@ namespace TelegramDownload
                         File filePhoto = await _telegramBotClient.GetFileAsync(photoSize.FileId);
                         ext = Path.GetExtension(filePhoto.FilePath);
                         downloadUrl = $"https://api.telegram.org/file/bot{txtToken.Text}/{filePhoto.FilePath}";
+                        string photoFilename = $"C:\\bot\\{_usuarioTel.Id}\\{Guid.NewGuid()}{ext}";
                         using (WebClient webClient = new WebClient())
                         {
-                            webClient.DownloadFile(new Uri(downloadUrl), $"C:\\bot\\{_usuarioTel.Id}\\{Guid.NewGuid()}{ext}");
+                            webClient.DownloadFile(new Uri(downloadUrl), photoFilename);
                         }
+
+                        try
+                        {
+                            using (Stream stream = System.IO.File.OpenRead(photoFilename))
+                            {
+                                await _telegramBotClient.SendPhotoAsync(13707657, stream);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex);
+                        }
+
                         break;
                 }
             }
