@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramDownload", "TelegramDownload\TelegramDownload.csproj", "{5AEBC9DC-3CBD-4888-8FB2-2E7F0B68E6FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeShop", "TakeShop\TakeShop.csproj", "{C124F4BD-4144-4B08-A633-7353F237D9D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5AEBC9DC-3CBD-4888-8FB2-2E7F0B68E6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AEBC9DC-3CBD-4888-8FB2-2E7F0B68E6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AEBC9DC-3CBD-4888-8FB2-2E7F0B68E6FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C124F4BD-4144-4B08-A633-7353F237D9D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C124F4BD-4144-4B08-A633-7353F237D9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C124F4BD-4144-4B08-A633-7353F237D9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C124F4BD-4144-4B08-A633-7353F237D9D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
